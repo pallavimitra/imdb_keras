@@ -4,22 +4,22 @@ import predict
 
 app = Flask(__name__)
 
-'''@app.route('/predict', methods=['GET'])
+@app.route('/predict', methods=['POST'])
 def run():
     try:
-        data = request.get_json(force=True)
-        input_params = data['input']
-        result =  predict.predict(input_params)
-        return jsonify({'prediction': result})
-        #return "Hello world!!"
+        #data = request.get_json(force=True)
+        #input_params = data['input']
+        #result =  predict.predict(input_params)
+        #return jsonify({'prediction': result})
+        return "Hello world!!"
     except Exception as e:
         print(traceback.format_exc())
-        return jsonify({'error': str(e)})'''
+        return jsonify({'error': str(e)})
 
-@app.route('/score', methods=['POST'])
+'''@app.route('/score', methods=['POST'])
 def score():
     features = request.json['X']
-    return make_response(jsonify({'score': features}))
+    return make_response(jsonify({'score': features}))'''
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080)
