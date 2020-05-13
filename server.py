@@ -1,14 +1,14 @@
 from flask import Flask, jsonify, make_response, request
 import traceback 
 import predict
-import logging
+import sys
 
 app = Flask(__name__)
 
 @app.route('/predict', methods=['POST'])
 def run():
     try:
-        app.logger.debug('this is a DEBUG message')
+        print('This is standard output', file=sys.stdout)
         #data = request.get_json(force=True)
         #print({'data recived' : data})
         #input_params = data['input']
