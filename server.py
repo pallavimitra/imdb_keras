@@ -11,7 +11,7 @@ def run():
         #input_params = data['input']
         #result =  predict.predict(input_params)
         #return jsonify({'prediction': result})
-        return "Hello world!!"
+        return make_response(jsonify({'Hello world!!'}))
     except Exception as e:
         print(traceback.format_exc())
         return jsonify({'error': str(e)})
