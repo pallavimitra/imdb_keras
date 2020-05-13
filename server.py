@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route('/predict', methods=['POST'])
 def run():
     try:
-        print("Request Recieved")
+        print 'Request Recieved'
         #data = request.get_json(force=True)
         #print({'data recived' : data})
         #input_params = data['input']
