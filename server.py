@@ -7,11 +7,16 @@ app = Flask(__name__)
 @app.route('/predict', methods=['POST'])
 def run():
     try:
-        #data = request.get_json(force=True)
-        #input_params = data['input']
-        #result =  predict.predict(input_params)
+        print("Request Recieved")
+        data = request.get_json(force=True)
+        print({'data recived' : data})
+        input_params = data['input']
+        print({'input recived' : input_params})
+        result =  predict.predict(input_params)
+        print('prediction')
+        print(result)
         #return jsonify({'prediction': result})
-        return "Hello World!!"
+        #return "Hello World!!"
     except Exception as e:
         print(traceback.format_exc())
         return jsonify({'error': str(e)})
