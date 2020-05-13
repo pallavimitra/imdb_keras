@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route('/predict', methods=['POST'])
 def run():
     try:
-        app.logger.debug(‘this is a DEBUG message’)
+        app.logger.debug('this is a DEBUG message')
         #data = request.get_json(force=True)
         #print({'data recived' : data})
         #input_params = data['input']
