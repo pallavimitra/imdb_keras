@@ -5,10 +5,9 @@ import sys
 
 app = Flask(__name__)
 
-@app.route('/predict', methods=['POST'])
+'''@app.route('/predict', methods=['POST'])
 def run():
     try:
-        '''
         #data = request.get_json(force=True)
         #print({'data recived' : data})
         #input_params = data['input']
