@@ -15,7 +15,7 @@ def run():
         return "Hello World!!"
     except Exception as e:
         print(traceback.format_exc())
-        return jsonify({'error': str(e)})'''
+        return jsonify({'error': str(e)})
 
 
 if __name__ == '__main__':
